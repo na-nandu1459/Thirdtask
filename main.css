@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+header{
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.logo{
+    padding: 30px;
+    margin-top: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+ul{
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    padding: 30px;
+    margin-top: 10px;
+    color: #fff;
+}
+nav ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;   
+}
+.header-text{
+    max-width: 500px;
+    margin: 80px 0;
+    padding:20px ;
+    margin-left: 120px;
+    margin-top: 10%;
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase;
+    border: 2px solid hsl(0, 0%, 100%);
+}
+.header__menu {
+    display: none;
+}
+
+/*-------section2------*/
+.container2{
+    display: flex;
+    margin-top: 2%;
+}
+.container2 .leftimage img{
+    width:600px;
+    height: 400px;
+    margin: 90px;
+    background-size: contain;
+}
+.container2 .rightcontent{
+    position: relative;
+    /*margin-top: 13%;*/
+    top: 250px;
+    background-color:white;
+    right: 220px;
+    padding: 20px;
+    height: 330px;
+    
+}
+.container2 .rightcontent h1{
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 500;
+    margin-left: 60px;
+    text-transform: uppercase;
+}
+.container2 .rightcontent p{
+    padding: 10px;
+    margin-left: 60px;
+    line-height: 0.7cm;
+    color: gray;
+    font-family:'Alata', sans-serif;
+}
+/*------------section 3------------*/
+.container3{
+    display: flex;
+    justify-content: space-around;
+    position: relative; /*z index specifies the stack order of an element, it always works with position elemnts*/
+    z-index: 1; /*+1 means it will be placed above the elemnt , -1 means placing behind*/
+    margin-top: 5%;
+}
+.container3 button{
+    padding: 10px 50px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color:white ;
+    cursor: pointer;
+}
+.container3 button:hover{
+    background-color: black;
+    color: white;
+}
+.container3 .content{
+    margin-right: 25%; /*to more creations and see all to the corner*/
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+/*---------section4------------*/
+.container4{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;/*not sure ask tomarrow*/
+    margin-top: 5%;
+    position: relative;
+}
+.container4 .img{
+    height: 420px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin: 20px;/*to give spacing between the images*/
+    cursor: pointer;
+    
+}
+
+.img h1{
+    position: relative;
+    top:73%;
+    letter-spacing: 5px;
+    margin-right: 30px;
+}
+.img1{
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+}
+.img2{
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+}
+.img3{
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+}
+.img4{
+    background-image: url(./images/desktop/image-grid.jpg);
+}
+.img5{
+    background-image: url(./images/desktop/image-from-above.jpg);
+}
+.img6{
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+}
+.img7{
+    background-image: url(./images/desktop/image-curiosity.jpg);
+}
+.img8{
+    background-image: url(./images/desktop/image-fisheye.jpg);
+}
+.container4 .img:hover{
+    background-color:grey;
+    opacity: 0.8;
+}
+.container4 .img:hover h1{
+    color: black;
+    opacity: 1;
+}
+/*-------FOOTER-----------*/
+.footer {
+    background: black;
+    margin-top: 10%;
+  }
+  .footer-container {
+    padding: 60px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 16px;
+    color: rgb(236, 226, 226);
+    cursor: pointer;
+  }
+  .footer-menu ul a {
+    text-decoration: none;
+    /*color: rgb(179, 179, 179);*/
+    color: #fff;
+  }
+  .footer-menu ul li a:hover{
+    text-decoration: underline;
+}
+  .icons {
+    display: flex;
+    gap:20px;
+  }
+  .p{
+    color: gray;
+    margin-top: 30px;
+  }
+  #mobile-menu{
+    display: none;
+}
+
+  @media only screen and (max-width:375px){
+    .container1{
+        background-image: url(images/mobile/image-hero.jpg);
+        padding: 5%;
+    }
+
+    .container1 header #mobilenav{
+        display: block;
+        z-index: 40;
+        position: fixed;
+        right: 5%;
+        top: 5%;
+        cursor: pointer;
+        width: 50px;
+    }
+
+    .container1 header nav{
+        display: none;
+    }
+
+    .container1 header .logo{
+        width: 250px;
+    } 
+
+    .container1 header{
+        padding: 30px 0 0 0;
+    }
+
+    .container1 h1{
+        margin-top: 35%;
+        width: 100%;
+        font-size: 80px;
+        line-height: 80px;
+        letter-spacing: 2px;
+        font-weight: 100;
+        padding: 5%;
+    }
+
+    .container1 h1 .break{
+        display: block;
+    }
+    .container4{
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        background-size: cover;
+        width: 100%;
+        height: 150px;
+    }
+    
+     .img1{
+        background-image: url(./images/mobile/image-deep-earth.jpg);
+    }
+
+    .img2{
+        background-image: url(./images/mobile/image-night-arcade.jpg);
+    }
+
+     .img3{
+        background-image: url(./images/mobile/image-soccer-team.jpg);
+    }
+
+     .img4{
+        background-image: url(./images/mobile/image-grid.jpg);
+    }
+
+     .img5{
+        background-image: url(./images/mobile/image-from-above.jpg);
+    }
+
+    .img6 {
+        background-image: url(./images/mobile/image-pocket-borealis.jpg);
+    }
+
+     .img7{
+        background-image: url(./images/mobile/image-curiosity.jpg);
+    }
+
+    .img8 {
+        background-image: url(./images/mobile/image-fisheye.jpg);
+    }
+  }
