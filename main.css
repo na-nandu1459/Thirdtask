@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
 *{
     box-sizing: border-box;
 }
@@ -11,7 +19,7 @@ body {
 }
 .header {
     padding: 50px 120px 80px;
-    color: hsl(0, 0%, 100%);
+    color:var(--white);
     background-image: url(./images/desktop/image-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,7 +57,7 @@ body {
     position: absolute;
     bottom: -8px;
     height: 3px;
-    background-color: white;
+    background-color:var(--white);
 }
 .header-item:hover .header-link::after {
     left: 25%;
@@ -65,17 +73,20 @@ body {
     line-height: 1.2;
     letter-spacing: 3px;
     text-transform: uppercase;
-    border: 2px solid hsl(0, 0%, 100%);
+    border: 2px solid var(--white);
 }
 
 /*--------leader--------*/
 .leader{
     display: flex;
     flex-direction:row;
-    width: 100%;
    margin-top: 80px;
    margin: 80px;
-   padding: 20px;
+   padding: 90px;
+    
+   max-width: 1500px;
+   margin: auto;
+   
 }
 .leader-interactive {
     width: 50%;
@@ -92,7 +103,7 @@ body {
     align-self: end;
     position: relative;
     left: -100px;
-    background-color:white;
+    background-color:var(--white);
     margin-top: 10%;
 }
 .leader-title {
@@ -103,13 +114,15 @@ body {
 
 .leader-desc {
     margin-top: 30px;
-    color: hsl(0, 0%, 55%);
+    color: var(--dark-gray);
     line-height: 1.5;
 }
 
 /*---------creation section-----------*/
 .creation {
     padding: 0 120px;
+    max-width: 1600px;
+    margin: auto;
 }
 .creation-info {
     display: flex;
@@ -132,14 +145,12 @@ body {
     transition: 2ms;
 }
 .creation-button:hover {
-    background-color:black;
-    color:white;
+    background-color:var(--black);
+    color:var(--white);
 }
 .creation-items {
    margin: 50px 0;
     display: flex;/*it offers grid based system in rows and columns*/
-    /*grid-template-columns: repeat(4, 1fr);/*specifies the number of columns in a grid layout*/
-
     flex-direction: column;
     row-gap: 30px;
 }
@@ -169,28 +180,24 @@ body {
 .creation-imgs {
     position: absolute;
     margin:0;
-    /*top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;*/
 }
 
 .creation-item:hover .creation-imgs {
-    background-color: white;
+    background-color:var(--white);
     opacity: 0.5;
 }
 
 .creation-name {
     width: 100%;
     padding: 50px;
-    color: white;
+    color: var(--white);
     font-size: 28px;
     font-family: "Josefin Sans", sans-serif;
     text-transform: uppercase;
 }
 
 .creation-item:hover .creation-name {
-    color: hsla(0, 0%, 0%, 1);
+    color: var(--black);
     z-index: 1; /*used to highlight */
 }
 
@@ -229,12 +236,12 @@ body {
 
 /*--------------FOOTER--------------*/
 .footer {
-    padding: 20px 100px;
-    background-color: hsl(0, 0%, 0%);
+    padding: 25px 90px;
+    background-color: var(--black);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .footer-left {
@@ -242,12 +249,13 @@ body {
     flex-direction: column;
 }
 .footer-logo{
-    height: 5vh;
     width: 120px;
-    margin-left: 35px;
+    margin-left: 30px;
 }
 .footer-list {
     display: flex;
+    margin-top: 8%;
+    font-size: 18px;
 }
 .footer-item {
     margin-right: 30px;
@@ -255,7 +263,7 @@ body {
 
 .footer-link {
     position: relative;
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     text-decoration: none;
     cursor: pointer;
 }
@@ -265,10 +273,8 @@ body {
     position: absolute;
     bottom: -8px;
     width: 0;
-    left: 500%;
-    right: 50%;
     height: 2px;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .footer-item:hover .footer-link::after {
@@ -281,7 +287,7 @@ body {
    display: flex;
    flex-direction: column;
     justify-content: space-around;
-    color: hsl(0, 0%, 100%);
+    color: var(--white);
     align-items: center;
     text-align: center;
 }
@@ -292,11 +298,12 @@ body {
 }
 
 .footer-social {
-    margin-right: 30px;
+    margin-right: 17px;
     cursor: pointer;
 }
 .footer-copyright {
-    color: hsl(0, 0%, 41%);
+    color: var(--very-dark-gray);
+    margin-top: 8%;
 }
 .down-button{
     display: none;
@@ -330,14 +337,9 @@ body {
 
     .leader-info {
         width: 100%;
-        position: static;   
+        position: static;  
         text-align: center;
     }
-
-    .creation-items {
-        grid-template-columns: 1fr;
-    }
-
     .creation-item {
         background-size: cover;
         width: 100%;
@@ -458,8 +460,7 @@ body {
         flex-direction: column;
         justify-content: center;
 
-        background-color: black;
-      /*  z-index: 0;*/
+        background-color:var(--black);
     }
     .header-item {
         margin: 20px 0;
