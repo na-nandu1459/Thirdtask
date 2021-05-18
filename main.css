@@ -16,6 +16,8 @@ body {
     font-size: 15px;
     font-family: "Alata", sans-serif;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }
 .header {
     padding: 50px 120px 80px;
@@ -250,12 +252,13 @@ body {
 }
 .footer-logo{
     width: 120px;
-    margin-left: 30px;
+    margin-left: 0px;
 }
 .footer-list {
     display: flex;
     margin-top: 8%;
     font-size: 18px;
+    padding: 0;
 }
 .footer-item {
     margin-right: 30px;
@@ -295,6 +298,7 @@ body {
 .footer-socials {
     display: flex;
     list-style-type: none;
+    margin-left: 0px;
 }
 
 .footer-social {
@@ -326,13 +330,13 @@ body {
     .leader {
         display: flex;
         flex-direction: column;
-        margin-left: 5%;
     }
 
     .leader-interactive {
         max-width: 800px;
         width: 100%;
         background-size: cover;
+
     }
 
     .leader-info {
@@ -393,6 +397,7 @@ body {
 
     .footer {
         display: block;
+        
     }
 
     .footer-left {
@@ -411,7 +416,7 @@ body {
 
     .footer-right {
         margin-top: 30px;
-        margin-left: 75px;
+        margin-left: 0px;
 
     }
 }
@@ -490,7 +495,6 @@ body {
     .creation-info {
         flex-direction: column;
     }
-
     .creation-button {
         margin-top: 30px;
         padding: 10px 50px;
@@ -499,6 +503,12 @@ body {
     .footer {
         padding: 20px;
     }
+    .footer-socials {
+        display: flex;
+        list-style-type: none;
+        margin-left: 0px;
+    }
+
 }
 @media only screen and (max-width: 400px) {
 
@@ -517,6 +527,7 @@ body {
     .creation-title {
         font-size: 32px;
     }
+
 }
 
 
